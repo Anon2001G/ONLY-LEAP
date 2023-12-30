@@ -1,0 +1,28 @@
+CLASE PRINCIPAL:
+	- setup()		:	Todo se inicializa.
+	- draw()		: 	Loop principal.
+	- menu()		:	Se carga el menú (tres textos y un botón con su collider)
+	- game()		:	Se carga el juego (con el funcionamiento del puntaje, las físicas del personaje y las distintas funciones de cada clase necesaria).
+	- end()			: 	Se carga la pantalla del final (con un botón de volver a jugar).
+	- reset()		:	Todas las variables globales sufren un reseteo y empieza el juego de nuevo.
+	- setMap()		:	Se crean los objetos de las clases de las plataformas, y se inicializan en el mapa (junto a otros métodos de las clases).
+	- cargarPuntuacion()	: 	Se carga y guarda la puntuación (dependiendo de si es superior a la anterior).
+	- filePrint()		:	Solo se guarda la puntuación.
+	- showText()		:	Se muestra el texto que le pases como parámetro (con su configuración propia).
+
+
+
+CLASE PERSONAJE:
+	- dibujarPersonaje()	:	Se muestra al personaje por pantalla (se le limita por la derecha e izquierda y se le configura por si sube al punto máximo; además se configuran los colliders).
+	- collisionImpulse()	:	Devuelve la velocidad instantanea como impulso cuando los colliders detectan que está tocando el suelo (si se presiona espacio salta un 40% más).
+	- getImpulse()		:	Devuelve la magnitud del vector de impulso calculada con las velocidades relativas.
+	- getCoyoteTime()	:	Retorna true si los colliders detectan que están dentro de la zona en la que el jugador puede saltar.
+	- move()		: 	Cambia la velocidad del personaje en el eje X dependiendo de la tecla que el jugador pulse (derecha/izquierda).
+	- lose()		:	Retorna true si el jugador llega a tocar el suelo (pierde).
+
+
+
+CLASE PLATAFORMA:
+	- dibujarPlataforma()	:	Se muestra la plataforma por pantalla (se le añade una velocidad que va acelerando con el tiempo para que baje más rápido con el tiempo).
+	- reset()		:	Resetea la posición de la plataforma al punto más alto (con una posición en el eje X pseudoaleatoria).
+	- Up()			:	Acelera la plataforma cuando el personaje esté tocando el techo (le pone más velocidad además de la añadida en el método "dibujarPlataforma()").
