@@ -1,8 +1,3 @@
-Creado por: Gabriel Cañizares Valderas.
-Curso 1º de Diseño y Desarrollo de videojuegos
-
-
-
 * La aplicación.exe es el llamado ONLY_LEAP. En "puntuación.txt" puedes encontrar tu máxima puntuación.
 
 * La parte técnica del juego está expuesto en la memoria del trabajo.
